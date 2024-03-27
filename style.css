@@ -34,7 +34,7 @@ body{
 }
 
 .hero--header{
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .signup--section{
@@ -122,6 +122,10 @@ label{
     color: #939393;
 }
 
+.signup--section, .hero--section{
+    width: 100%!important;
+}
+
 @media (min-width: 720px){
     body{
         flex-direction: row;
@@ -134,5 +138,14 @@ label{
 
     .hero--section{
         width: 40%;
+    }
+}
+
+@media (max-width: 480px){
+    form label, button{
+        grid-column: span 1;
+    }
+    form{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
